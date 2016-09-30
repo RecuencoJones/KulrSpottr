@@ -1,0 +1,11 @@
+.tile{
+  display: inline-block;
+  box-sizing: border-box;
+  border: 2px solid grey;
+  border-radius: 10%;
+  float:left;
+  cursor: pointer;
+  &.tile--highlight{ //used by solver script
+    border-color: orange;
+  }
+}

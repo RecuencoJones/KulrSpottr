@@ -1,0 +1,93 @@
+.hall{
+  opacity: 0;
+  transition: 0s all;
+  text-align: center;
+  font-family: sans-serif;
+  height: 0;
+  width: 100%;
+  position: fixed;
+  background: white;
+  overflow: hidden;
+
+  &.hall--visible{
+    opacity: 1;
+    padding-top: 50px;
+    height: 100%;
+    transition: 1s all;
+  }
+
+  .hall__close-btn{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 40px;
+  }
+
+  .hall__list{
+    padding: 30px 20px;
+    width: 768px;
+    margin: 30px auto;
+    box-sizing: border-box;
+
+    .hall__list-container{
+      background: #beb9b5;
+      border: 1px solid black;
+    }
+
+    .hall__player {
+      text-align: left;
+      text-overflow: ellipsis;
+      overflow: hidden;
+
+      .hall__player__rank, .hall__player__name {
+        float: left;
+      }
+
+      .hall__player__rank {
+        background: #ff9391;
+        min-width: 30px;
+        text-align: center;
+      }
+
+      .hall__player__score {
+        background: #7ea9ff;
+        min-width: 30px;
+        text-align: center;
+        float: right;
+      }
+
+      .hall__player__name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-left: 10px;
+        width: calc(100% - 70px);
+        display: inline-block;
+        white-space: nowrap;
+      }
+
+      &.hall__player--currentPlayer{
+        color: #008d0c;
+      }
+    }
+  }
+
+  @media (max-width : 768px){
+    .hall__list {
+      margin: 0;
+      padding: 30px 20px;
+      width: 100%;
+    }
+    .hall__list-container{
+
+    }
+  }
+
+  @media (max-width : 360px){
+    .hall__list {
+      margin: 0;
+      padding: 30px 0;
+      width: 100%;
+    }
+  }
+}

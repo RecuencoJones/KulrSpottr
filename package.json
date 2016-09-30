@@ -1,0 +1,39 @@
+{
+  "name": "KulrSpottr",
+  "version": "1.0.0",
+  "description": "KulrSpottr game. Tile color selector.",
+  "main": "dist/app.min.js",
+  "scripts": {
+    "serve": "./node_modules/node-serve/server.js --path dist",
+    "build": "grunt build",
+    "sass": "node-sass styles/main.scss dist/style.css",
+    "test": "mocha --reporter spec --compilers js:babel-core/register test-helper.js",
+    "coverage": "./node_modules/.bin/babel-node node_modules/babel-istanbul/lib/cli.js cover --report text --report html --root src ./node_modules/mocha/bin/_mocha -- test-helper.js",
+    "all": "npm run sass && npm run build && npm run serve"
+  },
+  "author": "Diego Marquina Trasobares",
+  "license": "BSD",
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-core": "^6.14.0",
+    "babel-istanbul": "^0.11.0",
+    "babel-plugin-external-helpers": "^6.8.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-register": "^6.14.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.0",
+    "chai": "^3.5.0",
+    "color": "^0.11.3",
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^3.8.0",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "istanbul": "^0.4.5",
+    "mercury": "^14.1.0",
+    "mocha": "^3.0.2",
+    "node-sass": "^3.10.0",
+    "sinon": "^1.17.6",
+    "node-serve": "0.0.3"
+  }
+}

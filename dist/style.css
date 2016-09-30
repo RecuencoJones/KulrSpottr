@@ -1,0 +1,87 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  overflow: hidden; }
+
+.ui {
+  position: fixed;
+  bottom: 10px;
+  font-size: 3rem;
+  pointer-events: none;
+  left: 20px;
+  text-shadow: 1px 1px #838482;
+  font-family: sans-serif; }
+
+.tile {
+  display: inline-block;
+  box-sizing: border-box;
+  border: 2px solid grey;
+  border-radius: 10%;
+  float: left;
+  cursor: pointer; }
+  .tile.tile--highlight {
+    border-color: orange; }
+
+.hall {
+  opacity: 0;
+  transition: 0s all;
+  text-align: center;
+  font-family: sans-serif;
+  height: 0;
+  width: 100%;
+  position: fixed;
+  background: white;
+  overflow: hidden; }
+  .hall.hall--visible {
+    opacity: 1;
+    padding-top: 50px;
+    height: 100%;
+    transition: 1s all; }
+  .hall .hall__close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 40px; }
+  .hall .hall__list {
+    padding: 30px 20px;
+    width: 768px;
+    margin: 30px auto;
+    box-sizing: border-box; }
+    .hall .hall__list .hall__list-container {
+      background: #beb9b5;
+      border: 1px solid black; }
+    .hall .hall__list .hall__player {
+      text-align: left;
+      text-overflow: ellipsis;
+      overflow: hidden; }
+      .hall .hall__list .hall__player .hall__player__rank, .hall .hall__list .hall__player .hall__player__name {
+        float: left; }
+      .hall .hall__list .hall__player .hall__player__rank {
+        background: #ff9391;
+        min-width: 30px;
+        text-align: center; }
+      .hall .hall__list .hall__player .hall__player__score {
+        background: #7ea9ff;
+        min-width: 30px;
+        text-align: center;
+        float: right; }
+      .hall .hall__list .hall__player .hall__player__name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-left: 10px;
+        width: calc(100% - 70px);
+        display: inline-block;
+        white-space: nowrap; }
+      .hall .hall__list .hall__player.hall__player--currentPlayer {
+        color: #008d0c; }
+  @media (max-width: 768px) {
+    .hall .hall__list {
+      margin: 0;
+      padding: 30px 20px;
+      width: 100%; } }
+  @media (max-width: 360px) {
+    .hall .hall__list {
+      margin: 0;
+      padding: 30px 0;
+      width: 100%; } }
