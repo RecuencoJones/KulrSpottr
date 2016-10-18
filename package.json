@@ -30,10 +30,11 @@
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^0.6.1",
     "istanbul": "^0.4.5",
+    "jsdom": "9.8.0",
     "mercury": "^14.1.0",
     "mocha": "^3.0.2",
     "node-sass": "^3.10.0",
-    "sinon": "^1.17.6",
-    "node-serve": "0.0.3"
+    "node-serve": "0.0.3",
+    "sinon": "^1.17.6"
   }
 }
